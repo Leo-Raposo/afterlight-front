@@ -35,7 +35,7 @@ export class TrailsList implements OnInit {
         const helloWorldExercise: Exercise = {
           id: 1,
           title: 'Hello World',
-          completed: false
+          completed: true
         };
 
         this.exercises = [helloWorldExercise, ...response.exercises.map((name, index) => ({

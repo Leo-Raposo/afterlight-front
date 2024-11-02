@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-// Define the base URL and any required headers
 const API_URL = 'https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3';
 const API_TOKEN = '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';
 
@@ -30,10 +29,8 @@ export const sendChatMessage = async (messages: { sender: string; content: strin
     }
 };
 
-// Define a new base URL for the exercise API
 const EXERCISE_API_URL = 'https://44roy2.buildship.run/api/exercises';
 
-// Novo método para fazer requisição ao endpoint do exercício
 export const executeGetExerciseInstruction = async (language: string, name: string) => {
     try {
         const response = await axios.get(EXERCISE_API_URL + "/" + language + "/" + name);

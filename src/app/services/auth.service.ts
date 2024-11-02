@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://xb4oieqtfc.execute-api.us-east-1.amazonaws.com/prod';
+  private apiUrl = 'url';
 
   constructor(private http: HttpClient) { }
 
