@@ -1,0 +1,31 @@
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.stats-card {
+    border: 1px solid #1d263f;
+    border-radius: 8px;
+    padding: 20px;
+    background: rgba(11, 23, 57, 0);
+}
+
+.stats-label {
+    color: #aeb9e1;
+    font: 500 12px/1 Work Sans, sans-serif;
+    margin: 0;
+}
+
+.stats-value {
+    color: #fff;
+    font: 600 24px/1 Inter, sans-serif;
+    margin: 15px 0 0;
+}
+
+@media (max-width: 991px) {
+    .stats-grid {
+        margin-bottom: 40px;
+    }
+}

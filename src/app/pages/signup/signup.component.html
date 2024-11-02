@@ -1,0 +1,55 @@
+<main class="sign-up-container">
+  <header class="sign-up-header">
+    <h1 class="logo" (click)="navigateToHome()">A</h1>
+  </header>
+  <section class="sign-up-form-container">
+    <h2 class="sign-up-title">SIGN UP</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="sign-up-form">
+      <div class="form-group">
+        <label for="name" class="visually-hidden">Name</label>
+        <input type="text" id="name" formControlName="name" class="form-input" placeholder="Name" aria-label="Name">
+      </div>
+      <div class="form-group">
+        <label for="username" class="visually-hidden">Username</label>
+        <input type="text" id="username" formControlName="username" class="form-input" placeholder="Username" aria-label="Username">
+      </div>
+      <div class="form-group">
+        <label for="email" class="visually-hidden">Email</label>
+        <input type="email" id="email" formControlName="email" class="form-input" placeholder="Email" aria-label="Email">
+      </div>
+      <div class="form-group">
+        <label for="password" class="visually-hidden">Password</label>
+        <input type="password" id="password" formControlName="password" class="form-input" placeholder="Password" aria-label="Password">
+      </div>
+      <button type="submit" class="btn-sign-up">Sign Up</button>
+    </form>
+    <div class="divider">
+      <span class="divider-line"></span>
+      <span class="divider-text">or continue with</span>
+      <span class="divider-line"></span>
+    </div>
+    <div class="social-sign-up">
+      <button class="btn-social btn-google">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/cdc87177b78e91f4912c2726791b1a026f56b76484e94f1f77eb97037c260a3f?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+          alt="Google logo" class="social-icon">
+        <span>Sign Up</span>
+      </button>
+      <button class="btn-social btn-facebook">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/f30624731e7bf70acd301a5091448b944f7d64bd140a3a40741b01a385039a26?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+          alt="Facebook logo" class="social-icon">
+        <span>Sign Up</span>
+      </button>
+    </div>
+    <p class="terms-agreement">
+      By signing up, you agree to our <a href="#" class="terms-link">Terms.</a>
+    </p>
+  </section>
+  <footer class="sign-up-footer">
+    <p class="login-prompt">
+      <span class="login-prompt-text">Already have an account?&nbsp;</span>
+      <a href="/signin" class="login-link">Sign In</a>
+    </p>
+  </footer>
+</main>

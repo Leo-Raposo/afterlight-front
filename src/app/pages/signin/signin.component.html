@@ -1,0 +1,44 @@
+<main class="sign-in">
+    <header class="logo-container">
+        <h1 class="logo" (click)="navigateToHome()">A</h1>
+    </header>
+    <section class="form-container">
+        <h2 class="form-title">SIGN IN</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="sign-in-form">
+            <div class="form-group">
+                <label for="username" class="visually-hidden">Username</label>
+                <input type="text" id="username" formControlName="username" class="form-input" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="visually-hidden">Password</label>
+                <input type="password" id="password" formControlName="password" class="form-input"
+                    placeholder="Password" required>
+            </div>
+            <!-- Mensagem de erro centralizada logo abaixo do campo de senha -->
+            <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
+            <a href="#" class="forgot-password">Forgot your password?</a>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+        <div class="divider">
+            <span class="divider-line"></span>
+            <span class="divider-text">or continue with</span>
+            <span class="divider-line"></span>
+        </div>
+        <div class="social-buttons">
+            <button class="btn btn-social btn-google">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cdc87177b78e91f4912c2726791b1a026f56b76484e94f1f77eb97037c260a3f?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                    alt="Google logo" class="social-icon">
+                <span>Sign In</span>
+            </button>
+            <button class="btn btn-social btn-facebook">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/57512be6cdeb4e5722985e1df4a90e4af6ad70095f87916ec57647c5789caf46?placeholderIfAbsent=true&apiKey=41a7402f6dab483c82b6fcabc71f9215"
+                    alt="Facebook logo" class="social-icon">
+                <span>Sign In</span>
+            </button>
+        </div>
+    </section>
+    <footer class="sign-up-prompt">
+        <span>Don't have an account?&nbsp;</span>
+        <a href="/signup" class="sign-up-link">Sign Up</a>
+    </footer>
+</main>

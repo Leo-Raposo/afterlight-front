@@ -1,0 +1,8 @@
+<article class="mini-card">
+    <iframe *ngIf="showAnimation" src="https://lottie.host/embed/6f4bb64e-584e-454c-9fdc-da57508ff2e9/ibNfXLKruA.json"
+        class="lottie-animation" title="Lottie Animation">
+    </iframe>
+
+    <img [src]="imageUrl" [alt]="imageAlt" class="mini-card__image" loading="lazy">
+    <button class="navigate-arrow" (click)="navigateToDashboard()">→</button>
+</article>

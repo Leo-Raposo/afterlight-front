@@ -1,0 +1,153 @@
+:host {
+    display: contents;
+}
+
+.page-container {
+    background: #010213;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 900px;
+    width: 100vw;
+    align-items: flex-start;
+    gap: 40px 80px;
+    flex-wrap: wrap;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.background-image {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header {
+    position: relative;
+    align-self: start;
+}
+
+.logo {
+    color: #feffff;
+    letter-spacing: -0.8px;
+    text-align: center;
+    padding-left: 20px;
+    font: 400 40px/80px ArdelaEdgeX03-Regular, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.content-section {
+    position: relative;
+    align-self: flex-start;
+    display: flex;
+    margin-left: 140px;
+    flex-direction: column;
+    align-items: left;
+    flex: 1 0 0;
+    width: 100vw;
+    padding-left: 20px;
+}
+
+
+.subtitle {
+    color: #817cc9;
+    font: 500 24px Inter, sans-serif;
+}
+
+.main-title {
+    color: #fff;
+    margin-top: 16px;
+    width: 400px;
+    font: 500 45px Inter, sans-serif;
+}
+
+.description {
+    color: #b5b7c9;
+    margin-top: 16px;
+    font: 400 24px Inter, sans-serif;
+}
+
+.features-grid {
+    align-self: left;
+    margin-top: 145px;
+    margin-left: 227px;
+    padding-bottom: 50px;
+    width: 100%;
+    max-width: 1018px;
+}
+
+.features-container {
+    gap: 20px;
+    display: flex;
+}
+
+.feature-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 33%;
+    margin-left: 20px;
+}
+
+.feature-column:first-child {
+    margin-left: 0;
+}
+
+.feature-image {
+    aspect-ratio: 0.87;
+    object-fit: contain;
+    object-position: center;
+    width: 250px;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+@media (max-width: 991px) {
+    .content-wrapper {
+        max-width: 100%;
+        padding: 0 20px 100px;
+    }
+
+    .content-section {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .main-title {
+        max-width: 100%;
+        font-size: 40px;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+
+    .features-grid {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .features-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .feature-column {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .feature-image {
+        margin-top: 40px;
+    }
+}

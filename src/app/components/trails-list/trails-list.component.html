@@ -1,0 +1,14 @@
+<section class="exercise-list">
+    <mat-list>
+        <mat-list-item *ngFor="let exercise of exercises"
+            [ngClass]="{ 'active-exercise': exercise.completed, 'exercise-item': !exercise.completed }"
+            (click)="navigateToCodePage(exercise.id)">
+            <div class="exercise-content">
+                <h3 class="exercise-title">{{ exercise.title }}</h3>
+                <img *ngIf="exercise.completed" loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/488eda03dadc464d9f061e6f2fbf3e3d/8ece8d6365c5aba5a273ede52e8042485c4a14f06e2f7b234903ef5e86a3c215?apiKey=488eda03dadc464d9f061e6f2fbf3e3d&"
+                    alt="Exercise completion status" class="status-icon" />
+            </div>
+        </mat-list-item>
+    </mat-list>
+</section>

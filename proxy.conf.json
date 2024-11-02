@@ -1,0 +1,10 @@
+{
+    "/images": {
+        "target": "https://s3-us-west-2.amazonaws.com",
+        "secure": false,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/images": ""
+        }
+    }
+}

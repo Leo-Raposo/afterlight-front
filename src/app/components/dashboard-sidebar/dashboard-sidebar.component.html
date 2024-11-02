@@ -1,0 +1,65 @@
+<aside class="sidebar-container">
+    <nav class="sidebar-nav">
+        <header class="brand-header">
+            <h1 class="brand-title">AFTERLIGHT</h1>
+        </header>
+
+        <section class="navigation-menu">
+            <div class="menu-container">
+                <div class="menu-section">
+                    <div class="menu-group">
+                        <div class="menu-item-static" (click)="navigateToDashboard()"
+                            [ngClass]="{'active': isActive('/dashboard')}">
+                            <div class="menu-item-content">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/488eda03dadc464d9f061e6f2fbf3e3d/b7e020b968426bdfc4b657d8270620718c443ea7396875ff711abbdec50c5be1?apiKey=488eda03dadc464d9f061e6f2fbf3e3d&"
+                                    alt="Dashboard icon" class="menu-icon" />
+                                <span class="menu-text">Dashboard</span>
+                            </div>
+                        </div>
+
+                        <nav class="submenu-list">
+                            <button class="submenu-item" (click)="navigateToDashboard()"
+                                [ngClass]="{'active': isActive('/dashboard')}" tabindex="1">
+                                <span class="submenu-text">Perfil</span>
+                            </button>
+
+                            <button class="submenu-item" (click)="navigateToTrails()"
+                                [ngClass]="{'active': isActive('/trails')}" tabindex="2">
+                                <span class="submenu-text">Trails</span>
+                            </button>
+
+                            <button class="submenu-item" (click)="navigateToBadges()"
+                                [ngClass]="{'active': isActive('/badges')}" tabindex="3">
+                                <span class="submenu-text">Badges</span>
+                            </button>
+
+                            <button class="submenu-item" (click)="navigateToRank()"
+                                [ngClass]="{'active': isActive('/rank')}" tabindex="4">
+                                <span class="submenu-text">Rank</span>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+
+                <hr class="menu-divider" />
+            </div>
+        </section>
+    </nav>
+
+    <footer class="user-profile">
+        <div class="profile-info">
+            <img src="https://i.ibb.co/8mBf8Ks/Whats-App-Image-2024-07-10-at-18-43-15.jpg" alt="User avatar"
+                class="profile-avatar" />
+            <div class="profile-details">
+                <span class="profile-name">{{ userProfile.username }}</span>
+                <span class="profile-role">{{ userProfile.role }}</span>
+            </div>
+        </div>
+        <button class="settings-button" tabindex="0" (click)="navigateToHome()">
+            <img src="https://cdn.builder.io/api/v1/image/assets/488eda03dadc464d9f061e6f2fbf3e3d/d7d233cae2c2c0b5e37aaf68b1491aafc7d73d004ea887a054034cf3076bc115?apiKey=488eda03dadc464d9f061e6f2fbf3e3d&"
+                alt="Settings" class="settings-icon" />
+        </button>
+
+    </footer>
+
+</aside>

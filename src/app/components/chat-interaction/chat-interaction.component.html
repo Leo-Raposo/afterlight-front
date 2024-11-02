@@ -1,0 +1,22 @@
+<div class="code-header">
+    <h2 class="section-title">Chat Interaction</h2>
+</div>
+
+<section class="chat-interaction">
+    <div #chatMessagesContainer class="chat-messages-container">
+        <div class="message" *ngFor="let message of messages">
+            <div class="message-header">
+                <img *ngIf="message.sender === 'assistant'" src="https://cdn-icons-png.flaticon.com/256/61/61191.png"
+                    alt="" class="avatar" style="background-color: white;" />
+                <div *ngIf="message.sender === 'user'" class="avatar avatar-placeholder"></div>
+                <span class="sender-name">{{message.sender}}</span>
+            </div>
+            <p class="message-content">{{message.content}}</p>
+        </div>
+    </div>
+    <div class="input-area">
+        <input type="text" [(ngModel)]="newMessage" (keyup.enter)="submitMessage()" class="chat-input"
+            placeholder="Type your message..." aria-label="Type your message">
+        <button class="submit-button" (click)="submitMessage()">➤</button>
+    </div>
+</section>

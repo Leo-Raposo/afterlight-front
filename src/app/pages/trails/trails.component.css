@@ -1,0 +1,30 @@
+.trails-container {
+    background-color: rgb(1, 2, 19);
+    background-image: url('https://cdn.builder.io/api/v1/image/assets/488eda03dadc464d9f061e6f2fbf3e3d/c6747d71f4b516f6805ec43deffb1110a7cde16e48246ce29f90e8fde5096de0?apiKey=488eda03dadc464d9f061e6f2fbf3e3d&');
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    width: calc(100% - 380px);
+    margin-left: 340px;
+    margin-right: 40px;
+    padding: 20px;
+}
+
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}

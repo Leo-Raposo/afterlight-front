@@ -1,0 +1,28 @@
+<div class="code-header">
+    <h2 class="section-title">Your Code</h2>
+    <button class="submit-button" (click)="submitCode()">Submit</button>
+</div>
+
+<section class="code-interaction">
+    <header class="file-header">
+        <div class="file-tab">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3605b226cc238811f5ac60d27af97959f3e88e58eb9c2c4ede65eb7a6e95792d?placeholderIfAbsent=true&apiKey=488eda03dadc464d9f061e6f2fbf3e3d"
+                alt="" class="file-icon" />
+            <span class="file-name">Java</span>
+        </div>
+    </header>
+
+    <div class="code-content">
+        <pre class="code-snippet">
+            <app-monaco-editor></app-monaco-editor>
+        </pre>
+    </div>
+</section>
+
+<div class="popup-overlay" *ngIf="showPopup">
+    <div class="popup-content-transparent">
+        <app-mini-card
+            [imageUrl]="'https://cdn.builder.io/api/v1/image/assets/488eda03dadc464d9f061e6f2fbf3e3d/2cd136655ce663ff3a3a2c758ab1ea1eb27971ca1a83b8cf7ecacbfdaccf9555?apiKey=488eda03dadc464d9f061e6f2fbf3e3d&'"
+            imageAlt="Popup image"></app-mini-card>
+    </div>
+</div>

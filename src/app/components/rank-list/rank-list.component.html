@@ -1,0 +1,10 @@
+<section class="rank-list">
+    <article *ngFor="let item of rankItems" class="rank-item" [ngClass]="{'highlight': item.position === 1}">
+        <div class="user-info">
+            <span class="position" *ngIf="item.position > 3">{{item.position}}º</span>
+            <img *ngIf="item.avatar" [src]="item.avatar" [alt]="item.name + '\'s avatar'" class="avatar" />
+            <span class="name">{{item.name}}</span>
+        </div>
+        <p class="points">Total Points: {{item.points}}</p>
+    </article>
+</section>

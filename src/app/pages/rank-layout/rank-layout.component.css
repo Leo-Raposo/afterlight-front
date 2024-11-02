@@ -1,0 +1,46 @@
+.rank-page {
+    background: rgba(1, 2, 19, 1);
+    min-height: 100vh;
+    background-image: url('https://cdn.builder.io/api/v1/image/assets/488eda03dadc464d9f061e6f2fbf3e3d/c6747d71f4b516f6805ec43deffb1110a7cde16e48246ce29f90e8fde5096de0?apiKey=488eda03dadc464d9f061e6f2fbf3e3d&');
+
+}
+
+.rank-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.sidebar-section {
+    width: 23%;
+}
+
+.main-content {
+    width: 100%;
+    padding: 20px;
+    margin-left: 300px;
+    margin-right: 100px;
+}
+
+.page-header {
+    margin-bottom: 48px;
+}
+
+.page-title {
+    color: #fff;
+    font: 600 20px/1.1 Work Sans, sans-serif;
+}
+
+@media (max-width: 991px) {
+    .rank-layout {
+        flex-direction: column;
+    }
+
+    .sidebar-section,
+    .main-content {
+        width: 100%;
+    }
+
+    .page-header {
+        margin-bottom: 40px;
+    }
+}

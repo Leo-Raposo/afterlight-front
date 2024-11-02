@@ -1,0 +1,78 @@
+.rank-container {
+    position: relative;
+    margin-top: 150px;
+    margin-left: 322px;
+    margin-right: 40px;
+    width: calc(100% - 382px);
+}
+
+.rank-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.rank-card {
+    border: 1px solid #1d263f;
+    border-radius: 12px;
+    padding: 39px 30px 65px;
+    background-color: rgba(11, 23, 57, 0);
+    box-shadow: 1px 1px 1px rgba(16, 25, 52, 0.4);
+}
+
+.rank-title {
+    color: #fff;
+    font: 500 16px/1 Work Sans, sans-serif;
+}
+
+.rank-badge {
+    width: 209px;
+    margin: 30px auto;
+    display: block;
+}
+
+.progress-info {
+    margin-top: 24px;
+}
+
+.progress-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0;
+}
+
+.progress-label {
+    color: #aeb9e1;
+    font: 400 14px/1 Work Sans, sans-serif;
+}
+
+.progress-value {
+    color: #fff;
+    font: 500 14px/1 Work Sans, sans-serif;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+}
+
+.chart-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 991px) {
+    .rank-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rank-card {
+        padding: 20px;
+    }
+
+    .chart-image {
+        margin-top: 30px;
+    }
+}

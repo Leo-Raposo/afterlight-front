@@ -1,0 +1,30 @@
+.header-container {
+    position: relative;
+    margin-left: 342px;
+    font-family: Work Sans, sans-serif;
+}
+
+.title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.subtitle {
+    color: #aeb9e1;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 5px;
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        margin-left: 10px;
+    }
+
+    .title {
+        margin-right: 2px;
+    }
+}

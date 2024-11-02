@@ -1,0 +1,143 @@
+:host {
+    display: contents;
+}
+
+.stakeholders-page {
+    background: rgba(1, 2, 19, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.stakeholders-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    align-items: start;
+    padding: 0 80px 382px 0;
+}
+
+.background-pattern {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.stakeholders-header {
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    display: flex;
+    width: 264px;
+    max-width: 100%;
+}
+
+.brand-logo {
+    color: #feffff;
+    letter-spacing: -0.8px;
+    text-align: left;
+    font: 400 40px/80px ArdelaEdgeX03-Regular, -apple-system, Roboto, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.main-text {
+    margin-top: 100px;
+    margin-left: 140px;
+
+}
+
+.section-label {
+    color: #817cc9;
+    font: 500 24px Inter, sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+.main-title {
+    position: relative;
+    color: #fff;
+    width: 726px;
+    font: 500 64px Inter, sans-serif;
+}
+
+.subtitle {
+    position: relative;
+    color: #b5b7c9;
+    font: 400 24px Inter, sans-serif;
+}
+
+.partner-logos {
+    position: relative;
+    align-self: center;
+    display: flex;
+    width: 737px;
+    max-width: 100%;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 182px 0 -76px;
+}
+
+.partner-logo {
+    object-fit: contain;
+    object-position: center;
+    max-width: 100%;
+}
+
+.partner-logo:nth-child(1) {
+    width: 144px;
+    aspect-ratio: 4.5;
+    margin: auto 0;
+}
+
+.partner-logo:nth-child(2) {
+    width: 151px;
+    aspect-ratio: 4.88;
+}
+
+.partner-logo:nth-child(3) {
+    width: 96px;
+    aspect-ratio: 2.53;
+}
+
+.partner-logo:nth-child(4) {
+    width: 100px;
+    aspect-ratio: 4.17;
+    margin: auto 0;
+}
+
+@media (max-width: 991px) {
+    .stakeholders-content {
+        max-width: 100%;
+        padding: 0 20px 100px;
+    }
+
+    .stakeholders-header {
+        white-space: initial;
+    }
+
+    .section-label {
+        margin-top: 40px;
+    }
+
+    .main-title {
+        max-width: 100%;
+        font-size: 40px;
+    }
+
+    .subtitle {
+        max-width: 100%;
+    }
+
+    .partner-logos {
+        margin: 40px 0 10px;
+    }
+}
