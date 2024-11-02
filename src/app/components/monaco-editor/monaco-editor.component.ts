@@ -1,31 +1,40 @@
 import { Component, ElementRef, AfterViewInit, ViewChild, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { MonacoLoaderService } from '../../services/monaco-loader.service';
+import { filter, take } from 'rxjs/operators';
+
+declare const monaco: any;
 
 @Component({
   selector: 'app-monaco-editor',
   standalone: true,
-  templateUrl: './monaco-editor.component.html',
-  styleUrls: ['./monaco-editor.component.css']
+  template: `<div #editorContainer style="height: 600px; border: 1px solid gray;"></div>`,
+  styles: [`:host { display: block; width: 100%; height: 100%; }`]
 })
 export class MonacoEditorComponent implements AfterViewInit, OnDestroy {
   @ViewChild('editorContainer', { static: false }) editorContainer!: ElementRef;
   private editorInstance: any;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private monacoLoader: MonacoLoaderService
+  ) { }
 
   async ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      try {
-        const monaco = await import('monaco-editor');
-        this.initMonaco(monaco);
-      } catch (error) {
-        console.error('Error loading Monaco Editor:', error);
-      }
+      this.monacoLoader.monacoLoaded$
+        .pipe(
+          filter(loaded => loaded),
+          take(1)
+        )
+        .subscribe(() => {
+          this.initMonaco();
+        });
     }
   }
 
-  private initMonaco(monaco: typeof import('monaco-editor')) {
-    if (!this.editorContainer) {
+  private initMonaco() {
+    if (!this.editorContainer || typeof monaco === 'undefined') {
       return;
     }
 
@@ -58,10 +67,11 @@ export class MonacoEditorComponent implements AfterViewInit, OnDestroy {
       language: 'javascript',
       theme: 'draculaTheme',
       automaticLayout: true,
+      minimap: { enabled: true },
+      scrollBeyondLastLine: false,
       renderLineHighlight: 'all',
       renderLineHighlightOnlyWhenFocus: false
     });
-
 
     monaco.editor.setTheme('draculaTheme');
   }
